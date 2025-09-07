@@ -6,10 +6,7 @@ int main()
 {
     lcd_init(); //Initializes the screen
 
-    //Sending text to the display, 1 character at a time.
-    lcd_send_char('H');
-    lcd_send_char('I');
-    lcd_send_char('!');
+    lcd_print(PI_CHAR " 3.14"); //Sending text to the LCD Screen
 
     while (true) {
 

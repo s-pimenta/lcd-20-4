@@ -79,3 +79,15 @@ void lcd_send_char(char c) {
     lcd_write_byte(c, true);
     sleep_us(43); // Data writes need at least 43 microseconds
 }
+
+// Prints a string of text to the screen
+void lcd_print(const char *text){
+    int i = 0; //track the current postion of the string
+
+    while (text[i] != '\0') { // checks if the current character is null
+        lcd_send_char(text[i]); // sends the character to the lcd screen
+        i = i + 1; // increments the index position
+    }
+}
+
+
